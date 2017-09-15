@@ -18,6 +18,7 @@ import org.opencv.imgproc.Imgproc;
 
 class MatchingDemo {
 	ArrayList<Match> matches = new ArrayList();
+	ArrayList<InteractionPair> interactionPairs = new ArrayList();
 	
     public void run(String inFile,String outFile, int match_method) 
     {
@@ -72,7 +73,26 @@ class MatchingDemo {
         System.out.println("Writing "+ outFile);
         for(Match m : matches)
         {
-        	System.out.println(m.toString());
+        	for(Match n: matches)
+        	{
+        		if(!n.equals(m))
+        		{
+        			if(InteractionPair.IsAnInteractionPair(n, m))
+        			{
+        				if(!interactionPairs.contains(new InteractionPair(m,n)))
+        				{
+        					interactionPairs.add(new InteractionPair(n, m));
+        				}
+        				
+        			}
+        		}
+        	}
+        	//System.out.println(m.toString());
+        	
+        	for(InteractionPair i : interactionPairs)
+        	{
+        		System.out.println(i.whoDidWhat());
+        	}
         }
     }
     
