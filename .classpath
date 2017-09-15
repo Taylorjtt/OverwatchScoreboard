@@ -12,5 +12,6 @@
 	<classpathentry kind="lib" path="Tess4J/lib/logback-classic-1.2.3.jar"/>
 	<classpathentry kind="lib" path="Tess4J/lib/logback-core-1.2.3.jar"/>
 	<classpathentry kind="lib" path="Tess4J/lib/slf4j-api-1.7.25.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/OpenCV"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
