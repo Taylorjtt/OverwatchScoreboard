@@ -1,6 +1,6 @@
 package Scoreboard;
 
-public enum Team {
+public enum TeamColor {
 
 	RED,BLUE
 }

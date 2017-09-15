@@ -20,7 +20,7 @@ public class Player {
 	{
 		return playedHeros;
 	}
-	public void gotKill(Hero hero)
+	public void gotKill(HeroName hero)
 	{
 		boolean heroFound = false;
 		for(PlayedHero h : playedHeros)
@@ -38,7 +38,7 @@ public class Player {
 			playedHeros.add(new PlayedHero(hero,1,0));
 		}
 	}
-	public void died(Hero hero)
+	public void died(HeroName hero)
 	{
 		boolean heroFound = false;
 		for(PlayedHero h : playedHeros)

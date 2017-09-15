@@ -10,10 +10,10 @@ public class Match
 {
 	private Point position;
 	private Dimension size;
-	private Hero hero;
-	private Team team;
+	private HeroName hero;
+	private TeamColor team;
 	
-	public Match(Point position,Dimension size, Hero hero, Team team)
+	public Match(Point position,Dimension size, HeroName hero, TeamColor team)
 	{
 		this.position = position;
 		this.hero = hero;
@@ -28,122 +28,122 @@ public class Match
 		returnString = returnString.concat("\nPosition:"+position.toString()+"\nSize"+size.toString());
 		return returnString;
 	}
-	public static Team getTeamFromFileName(String fileName)
+	public static TeamColor getTeamFromFileName(String fileName)
 	{
 		
 		if(fileName.contains("red"))
 		{
-			return Team.RED;
+			return TeamColor.RED;
 		}
 		if(fileName.contains("blue"))
 		{
-			return Team.BLUE;
+			return TeamColor.BLUE;
 		}
 		System.out.println("returning Null from team");
 		return null;
 	}
-	public static Hero getHeroFromFilename(String fileName)
+	public static HeroName getHeroFromFilename(String fileName)
 	{
 		
 		if(fileName.contains("Ana"))
 		{
-			return Hero.ANA;
+			return HeroName.ANA;
 		}
 		if(fileName.contains("Bastion"))
 		{
-			return Hero.BASTION;
+			return HeroName.BASTION;
 		}
 		if(fileName.contains("Doomfist"))
 		{
-			return Hero.DOOMFIST;
+			return HeroName.DOOMFIST;
 		}
 		if(fileName.contains("Dva"))
 		{
-			return Hero.DVA;
+			return HeroName.DVA;
 		}
 		if(fileName.contains("Genji"))
 		{
-			return Hero.GENJI;
+			return HeroName.GENJI;
 		}
 		if(fileName.contains("Hanzo"))
 		{
-			return Hero.HANZO;
+			return HeroName.HANZO;
 		}
 		if(fileName.contains("Hog"))
 		{
-			return Hero.ROADHOG;
+			return HeroName.ROADHOG;
 		}
 		if(fileName.contains("Junkrat"))
 		{
-			return Hero.JUNRAT;
+			return HeroName.JUNRAT;
 		}
 		if(fileName.contains("Lucio"))
 		{
-			return Hero.LUCIO;
+			return HeroName.LUCIO;
 		}
 		if(fileName.contains("Mcree"))
 		{
-			return Hero.MCREE;
+			return HeroName.MCREE;
 		}
 		if(fileName.contains("Mei"))
 		{
-			return Hero.MEI;
+			return HeroName.MEI;
 		}
 		if(fileName.contains("Mercy"))
 		{
-			return Hero.MERCY;
+			return HeroName.MERCY;
 		}
 		if(fileName.contains("Orisa"))
 		{
-			return Hero.ORISA;
+			return HeroName.ORISA;
 		}
 		if(fileName.contains("Pharah"))
 		{
-			return Hero.PHARAH;
+			return HeroName.PHARAH;
 		}
 		if(fileName.contains("Reaper"))
 		{
-			return Hero.REAPER;
+			return HeroName.REAPER;
 		}
 		if(fileName.contains("Rein"))
 		{
-			return Hero.REINHARDTH;
+			return HeroName.REINHARDTH;
 		}
 		if(fileName.contains("Soldier"))
 		{
-			return Hero.SOLDIER76;
+			return HeroName.SOLDIER76;
 		}
 		if(fileName.contains("Sombra"))
 		{
-			return Hero.SOMBRA;
+			return HeroName.SOMBRA;
 		}
 		if(fileName.contains("Sym"))
 		{
-			return Hero.SYMMETRA;
+			return HeroName.SYMMETRA;
 		}
 		if(fileName.contains("Torb"))
 		{
-			return Hero.TORBJORN;
+			return HeroName.TORBJORN;
 		}
 		if(fileName.contains("Tracer"))
 		{
-			return Hero.TRACER;
+			return HeroName.TRACER;
 		}
 		if(fileName.contains("Widow"))
 		{
-			return Hero.WIDOWMKER;
+			return HeroName.WIDOWMKER;
 		}
 		if(fileName.contains("Winston"))
 		{
-			return Hero.WINSTON;
+			return HeroName.WINSTON;
 		}
 		if(fileName.contains("Zarya"))
 		{
-			return Hero.ZARYA;
+			return HeroName.ZARYA;
 		}
 		if(fileName.contains("Zen"))
 		{
-			return Hero.ZENYATTA;
+			return HeroName.ZENYATTA;
 		}
 		System.out.println("returning Null from character");
 		return null;
@@ -155,11 +155,11 @@ public class Match
 		retString =  fileName.replace("blue", "");
 		return retString;
 	}
-	public Hero getHero() {
+	public HeroName getHero() {
 		return hero;
 	}
 
-	public void setHero(Hero hero) {
+	public void setHero(HeroName hero) {
 		this.hero = hero;
 	}
 
@@ -171,11 +171,11 @@ public class Match
 		this.position = position;
 	}
 
-	public Team getTeam() {
+	public TeamColor getTeam() {
 		return team;
 	}
 
-	public void setTeam(Team team) {
+	public void setTeam(TeamColor team) {
 		this.team = team;
 	}
 

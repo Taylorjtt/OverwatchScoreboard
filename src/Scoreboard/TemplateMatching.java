@@ -50,8 +50,8 @@ class MatchingDemo {
                 if(maxval >= threshold)
                 {
                 	System.out.println(maxval);
-                	Hero hero = Match.getHeroFromFilename(templateFile.getName());
-                	Team team = Match.getTeamFromFileName(templateFile.getName());
+                	HeroName hero = Match.getHeroFromFilename(templateFile.getName());
+                	TeamColor team = Match.getTeamFromFileName(templateFile.getName());
                 	matches.add(new Match(maxr.maxLoc,new Dimension(templ.cols(),templ.rows()), hero, team));
                     //Imgproc.rectangle(img, maxp, new Point(maxp.x + templ.cols(),
                            // maxp.y + templ.rows()), new Scalar(0, 255, 0),5);
@@ -61,10 +61,7 @@ class MatchingDemo {
                     break;
                 }
             }
-           
-
-            // Save the visualized detection.
-           
+       
            
         }
         long endTime = System.currentTimeMillis();

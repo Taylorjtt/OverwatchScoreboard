@@ -2,24 +2,24 @@ package Scoreboard;
 
 public class PlayedHero {
 	
-	private Hero playedHero;
+	private HeroName playedHero;
 	private int kills;
 	private int deaths;
 	
-	public PlayedHero(Hero hero)
+	public PlayedHero(HeroName hero)
 	{
 		this.playedHero = hero;
 		kills = 0;
 		deaths = 0;
 	}
-	public PlayedHero(Hero hero,int kills, int deaths)
+	public PlayedHero(HeroName hero,int kills, int deaths)
 	{
 		this.playedHero = hero;
 		this.kills = kills;
 		this.deaths = deaths;
 	}
 	
-	public Hero getHero()
+	public HeroName getHero()
 	{
 		return playedHero;
 	}
