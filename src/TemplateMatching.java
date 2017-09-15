@@ -33,9 +33,9 @@ class MatchingDemo {
 
             // / Do the Matching and Normalize
             Imgproc.matchTemplate(img, templ, result, match_method);
-            double threshold = 0.99;
+            double threshold = 0.95;
             double maxval;
-            Core.normalize(result, result, 0, 1, Core.NORM_MINMAX, -1, new Mat());
+            //Core.normalize(result, result, 0, 1, Core.NORM_MINMAX, -1, new Mat());
            
             while(true) 
             {
@@ -73,6 +73,6 @@ class MatchingDemo {
 public class TemplateMatching {
     public static void main(String[] args) {
         System.loadLibrary("opencv_java320");
-        new MatchingDemo().run("src/testImage.png", "src/output.png", Imgproc.TM_CCOEFF);
+        new MatchingDemo().run("src/testImage.png", "src/output.png", Imgproc.TM_CCOEFF_NORMED);
     }
 }
