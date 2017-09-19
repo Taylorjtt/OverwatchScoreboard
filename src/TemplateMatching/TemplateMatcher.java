@@ -21,8 +21,9 @@ import org.opencv.imgproc.Imgproc;
 
 import Scoreboard.HeroName;
 import Scoreboard.TeamColor;
+import util.ImageProcessor;
 
-public class ImageProcessor {
+public class TemplateMatcher {
 	
 	private File dir;
 	private File[] directoryListing;
@@ -30,7 +31,7 @@ public class ImageProcessor {
 	private Mat result = null;
 	private BufferedImage resultImage;
 	
-	public ImageProcessor()
+	public TemplateMatcher()
 	{
 		dir = new File("Resources");
 		directoryListing = dir.listFiles();
@@ -46,7 +47,7 @@ public class ImageProcessor {
 		
 		
 		try {
-			img = BufferedImage2Mat(image);
+			img = ImageProcessor.BufferedImage2Mat(image);
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -99,7 +100,7 @@ public class ImageProcessor {
              }
              
              try {
-            	 resultImage = Mat2BufferedImage(img);
+            	 resultImage = ImageProcessor.Mat2BufferedImage(img);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -108,19 +109,5 @@ public class ImageProcessor {
               
 		}
 	}
-	private static BufferedImage Mat2BufferedImage(Mat matrix)throws Exception 
-	{        
-	    MatOfByte mob=new MatOfByte();
-	    Imgcodecs.imencode(".png", matrix, mob);
-	    byte ba[]=mob.toArray();
 
-	    BufferedImage bi=ImageIO.read(new ByteArrayInputStream(ba));
-	    return bi;
-	}
-	private static Mat BufferedImage2Mat(BufferedImage image) throws IOException {
-	    ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-	    ImageIO.write(image, "jpg", byteArrayOutputStream);
-	    byteArrayOutputStream.flush();
-	    return Imgcodecs.imdecode(new MatOfByte(byteArrayOutputStream.toByteArray()), Imgcodecs.CV_LOAD_IMAGE_UNCHANGED);
-	}
 }

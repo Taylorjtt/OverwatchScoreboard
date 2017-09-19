@@ -1,4 +1,4 @@
-package Scoreboard;
+package util;
 
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -10,15 +10,14 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-import TemplateMatching.ImageProcessor;
-import util.ScreenGrabber;
+import TemplateMatching.TemplateMatcher;
 
 public class ScreenDrawer extends TimerTask {
 	
 	JFrame frame;
 	BufferedImage image;
 	ScreenSampler ss;
-	ImageProcessor imp = new ImageProcessor();
+	TemplateMatcher imp = new TemplateMatcher();
 	
 	public ScreenDrawer()
 	{
