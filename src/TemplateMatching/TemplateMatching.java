@@ -28,7 +28,7 @@ class MatchingDemo {
     	
     	BufferedImage img = null;
     	try {
-    	    img = ImageIO.read(new File("src/Nonnii.png"));
+    	    img = ImageIO.read(new File("src/Stylosa.png"));
     	} catch (IOException e) {
     		e.printStackTrace();
     	}
