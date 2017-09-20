@@ -45,7 +45,8 @@ public class BattleTagReader {
 		}
 		
 		
-		Core.inRange(source,new Scalar(10,0,180),new Scalar(80,80,255), result);
+		//Core.inRange(source,new Scalar(10,0,165),new Scalar(80,90,255), result); //red
+		Core.inRange(source,new Scalar(190,150,0),new Scalar(255,230,120), result); //blue
 		
 		//Imgproc.adaptiveThreshold(source, source2, 255, Imgproc.ADAPTIVE_THRESH_MEAN_C, Imgproc.THRESH_BINARY_INV, 41, -5);
 		//Imgproc.threshold(source2, result, 0.9, 255, Imgproc.THRESH_OTSU);
